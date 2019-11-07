@@ -18,7 +18,6 @@ import { CityWeather } from 'src/app/model/city-weather';
 import * as moment from 'moment';
 import { TitleCasePipe } from '@angular/common';
 import { By } from '@angular/platform-browser';
-import { RouterLinkDirectiveStub } from 'src/testing/router-link-directive-stub';
 
 describe('CityListItemComponent', () => {
   let component: CityListItemComponent;
@@ -93,6 +92,6 @@ describe('CityListItemComponent', () => {
     let href = fixture.debugElement.query(By.css('a')).nativeElement
     .getAttribute('href');
 
-    expect(href).toEqual(`/${sample.id}`);
+    expect(href).toEqual(`${sample.id}`);
   });
 });

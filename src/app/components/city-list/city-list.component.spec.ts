@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CityListComponent } from './city-list.component';
 import { WeatherService } from 'src/app/services/weather.service';
 import { MOCKWEATHERDATA } from 'src/app/model/city-weather.data';
@@ -9,7 +8,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MomentModule } from 'ngx-moment';
 import { RouterModule } from '@angular/router';
 import { WeatherIconComponent } from '../weather-icon/weather-icon.component';
-import { CITIES } from 'src/app/model/city.data';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { CityForecastComponent } from '../city-forecast/city-forecast.component';
 import { ForecastListComponent } from '../forecast-list/forecast-list.component';

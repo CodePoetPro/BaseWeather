@@ -1,0 +1,9 @@
+<forecast-list-item *ngFor="let forecast of forecasts" [forecast]="forecast"></forecast-list-item>
+<div *ngIf="loading" class="loader">
+    <img class="loader_icon" src="assets/icon/loading.svg">
+</div>
+<div *ngIf="!forecasts.length && !loading" class="empty">
+    <img class="empty_icon" src="assets/icon/dead.svg">
+        Nothing to see
+    <a class="link" (click)="reload()">Try Again</a>
+</div>

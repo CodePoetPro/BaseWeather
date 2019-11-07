@@ -1,0 +1,32 @@
+<a class="item-wrapper" title="Click to see forecasts" routerLink="./{{weather.id}}">
+<div class="city">
+  <h3 class="city_name">{{weather.name}}</h3>
+  <span class="city_time">Last updated - {{ (weather.dt | amFromUnix) | amDateFormat:'hh:mmA'}}</span>
+</div>
+<div class="weather">
+    <weather-icon [icon]="weather.weather[0].icon"></weather-icon>
+    <span class="weather_desc">{{weather.weather[0].description | titlecase}}</span>
+</div> 
+<div class="main">
+  <div class="main_temperature">
+      <fa-icon [icon]='faTemperatureHigh'></fa-icon> {{weather.main.temp}}
+      <span class="main_temperature_unit">
+        °C
+      </span>
+  </div>
+  <div>
+      <div class="main_pressure">
+         Pressure {{weather.main.pressure}}
+        </div>
+        <div class="main_humidity">
+           Humidity {{weather.main.humidity}} %
+        </div>
+  </div>
+ 
+</div>
+<div class="wind">
+  <span alt="wind speed" class="wind_speed"><fa-icon [icon]='faWind'></fa-icon> {{weather.wind.speed}} km/h</span>
+  <span *ngIf="weather.wind.deg" alt="wind degree" class="wind_deg">{{weather.wind.deg}}  ° </span>
+</div>
+</a>
+ 

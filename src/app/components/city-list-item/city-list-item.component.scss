@@ -1,0 +1,79 @@
+@import '../../../sass/abstracts/variables';
+@import '../../../sass/abstracts/mixins';
+
+.item-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    width: 100%;
+    align-items: center;
+    gap: $spacing*2;
+    grip-gap: $spacing*2;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    text-decoration: none;
+    color: #000;
+    padding-bottom: $spacing;
+    border-bottom: solid 1px lighten($accent,30);
+    &:hover{
+        background-color: #fff;
+        padding: $spacing $spacing*2;
+        border-bottom: none;
+        transform: scale(1.05);
+        z-index: 10;
+        -webkit-box-shadow: 0px 3px 18px -6px rgba(0,0,0,0.49);
+        -moz-box-shadow: 0px 3px 18px -6px rgba(0,0,0,0.49);
+        box-shadow: 0px 3px 18px -6px rgba(0,0,0,0.49);
+    }
+    .weather{
+        display: flex;
+        align-items: center;
+        @include breakpoint(xs) {
+            text-align: center;
+            justify-content: center;
+        }
+    }
+    .city{
+        @include breakpoint(xs) {
+            text-align: center;
+            justify-content: center;
+        }
+        &_name{
+            font-size: 36px;
+            margin-bottom: $spacing/5;
+        }
+        &_time{
+            font-size: 16px;
+            opacity: 0.5;
+        }
+    }
+    .wind{
+        @include breakpoint(xs) {
+            text-align: center;
+            justify-content: center;
+        }
+        display: flex;
+        &_speed{
+            margin-right: $spacing;
+        }
+    }
+    .main{
+        @include breakpoint(xs) {
+            text-align: center;
+            justify-content: center;
+        }
+        display: flex;
+        align-items: center;
+        &_temperature{
+            font-size: 24px;
+            margin-right: $spacing;
+        }
+        &_pressure{
+            display: block;
+            font-size: 14px;
+        }
+        &_humidity{
+            display: block;
+            font-size: 14px;
+        }
+    }
+}

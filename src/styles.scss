@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'sass/abstracts/variables';
+@import 'sass/abstracts/mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Abel', sans-serif;
+    font-size: 24px;
+}
+.loader{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.empty{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+a,.link{
+    color: $accent;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+    &:hover{
+        color: darken($accent, 10);
+    }
+}

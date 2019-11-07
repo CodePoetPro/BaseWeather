@@ -1,0 +1,8 @@
+<section>
+  <div>
+   <a title="back Home" [routerLink]="['../']" ><fa-icon [icon]="faArrowLeft"></fa-icon></a> &nbsp; 
+  <h1>{{city.name}}</h1>
+  <p>Forecasts</p>
+  </div>
+  <forecast-list [forecasts]="forecasts" [loading]="isLoadingForecasts" [reload]="getForecast"></forecast-list>
+</section>

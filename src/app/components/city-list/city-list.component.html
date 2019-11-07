@@ -1,0 +1,9 @@
+<city-list-item *ngFor="let cityWeather of citiesWeather" [weather]="cityWeather"></city-list-item>
+<div *ngIf="isLoadingWeather" class="loader">
+    <img class="loader_icon" src="assets/icon/loading.svg">
+</div>
+<div *ngIf="!citiesWeather.length && !isLoadingWeather" class="empty">
+    <img class="empty_icon" src="assets/icon/dead.svg">
+        Nothing to see
+    <a class="link" (click)="getWeatherDetail()">Try Again</a>
+</div>

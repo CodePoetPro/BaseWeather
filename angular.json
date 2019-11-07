@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/vendor/bootstrap-grid.min.css",
               "src/styles.scss"
             ],
             "scripts": []

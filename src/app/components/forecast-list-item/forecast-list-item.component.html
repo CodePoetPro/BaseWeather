@@ -1,0 +1,33 @@
+<section class="item-wrapper">
+    <div class="city">
+        <span class="city_time">{{(forecast.dt | amFromUnix) | amCalendar}}</span>
+        <span class="city_time_full">{{(forecast.dt | amFromUnix) | amDateFormat: 'dddd, MMMM Do YYYY'}}</span>
+    </div>
+    <div class="weather">
+        <weather-icon [icon]="forecast.weather[0].icon"></weather-icon>
+        <span class="weather_desc">{{forecast.weather[0].description | titlecase}}</span>
+    </div>
+    <div class="main">
+        <div class="main_temperature">
+            <fa-icon [icon]='faTemperatureHigh'></fa-icon> {{forecast.main.temp}}
+            <span class="main_temperature_unit">
+                °C
+            </span>
+        </div>
+        <div>
+            <div class="main_pressure">
+                Pressure {{forecast.main.pressure}}
+            </div>
+            <div class="main_humidity">
+                Humidity {{forecast.main.humidity}} %
+            </div>
+        </div>
+
+    </div>
+    <div class="wind">
+        <span alt="wind speed" class="wind_speed">
+            <fa-icon [icon]='faWind'></fa-icon> {{forecast.wind.speed}} km/h
+        </span>
+        <span *ngIf="forecast.wind.deg" alt="wind degree" class="wind_deg">{{forecast.wind.deg}} ° </span>
+    </div>
+</section>

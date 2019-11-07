@@ -22,28 +22,28 @@ I started by creating the structure of the project and breaking the project into
 
 ### Components
 There are five main components
-`city-list` this component renders of the currect weather condition of the cities.
-`city-list-item` this component renders the current weather condition for a particular city
-`city-forecast` this component holds the destination of the route to see for forecasts
-`forecast-list` this component renders the list of 4hour forecasts (`forecast-list-item`) for a particular city
-`forecast-list-item` this component renders a single 4hour forecast for a particular city
+- `city-list` this component renders of the currect weather condition of the cities.
+- `city-list-item` this component renders the current weather condition for a particular city
+- `city-forecast` this component holds the destination of the route to see for forecasts
+- `forecast-list` this component renders the list of 4hour forecasts (`forecast-list-item`) for a particular city
+- `forecast-list-item` this component renders a single 4hour forecast for a particular city
 
 Other component
-`weather-icon` this component renders an icon for a particular weather condition.
+- `weather-icon` this component renders an icon for a particular weather condition.
 
 ### Models and Data
-`city` this model defines the data structure of the city data without weather condition.
-`city-weather` this model defines the data structure of the city data with weather condition.
-`forecast-weather` this model defines the data structure of forecasts of a city.
-`city.data` this is the predefined data for the list of cities without weather condition.
-`city-weather.data` this is the mock data for the list of cities with weather condition for testing purposes.
-`forecast-weather.data` this is the mock data for the list of forecast for a particular city for testing purposes.
+- `city` this model defines the data structure of the city data without weather condition.
+-  `city-weather` this model defines the data structure of the city data with weather condition.
+- `forecast-weather` this model defines the data structure of forecasts of a city.
+- `city.data` this is the predefined data for the list of cities without weather condition.
+- `city-weather.data` this is the mock data for the list of cities with weather condition for testing purposes.
+-`forecast-weather.data` this is the mock data for the list of forecast for a particular city for testing purposes.
 
 ### Services 
-`cities.service` this service has a resource function `getCities()` that will fetch the the data in `city.data`.
-`weather.service` this service has two resource functions:
-- `getWeatherDetailByCities()` this function accepts list of cities `City[]` as params and fetches data from OpenWeather to return current weather condition for those cities.
-- `getForeCastDetailByCity()` this function accept a city `City` as param and fetches data from OpenWeather to return forecast weather condition for that city.
+- `cities.service` this service has a resource function `getCities()` that will fetch the the data in `city.data`.
+- `weather.service` this service has two resource functions:
+- - `getWeatherDetailByCities()` this function accepts list of cities `City[]` as params and fetches data from OpenWeather to return current weather condition for those cities.
+- - `getForeCastDetailByCity()` this function accept a city `City` as param and fetches data from OpenWeather to return forecast weather condition for that city.
 
 ### Tests Cases
 - `AppComponent`

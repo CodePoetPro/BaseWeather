@@ -9,10 +9,7 @@ import { ForecastListItemComponent } from '../forecast-list-item/forecast-list-i
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MomentModule } from 'ngx-moment';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, ActivatedRoute } from '@angular/router';
-import { WeatherService } from 'src/app/services/weather.service';
-import { ActivatedRouteStub } from 'src/testing/activated-route-stub';
+import { RouterModule } from '@angular/router';
 import { MOCKWEATHERDATA } from 'src/app/model/city-weather.data';
 import { CityWeather } from 'src/app/model/city-weather';
 import * as moment from 'moment';

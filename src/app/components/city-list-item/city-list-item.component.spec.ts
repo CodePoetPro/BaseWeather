@@ -89,6 +89,6 @@ describe('CityListItemComponent', () => {
     let href = fixture.debugElement.query(By.css('a')).nativeElement
     .getAttribute('href');
 
-    expect(href).toEqual(`${sample.id}`);
+    expect(href).toEqual(`/${sample.id}`);
   });
 });
